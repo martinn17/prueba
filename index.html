@@ -1,5 +1,16 @@
 <html>
 <head>
+<script src=phonegap.js type=text/javascript></script>
+<script>// Wait for Cordova to connect with the device
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // Cordova is ready to be used!
+    //
+function tomar() {
+var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
 <title>prueba</title>
 </head>
 <body>
@@ -8,5 +19,6 @@ al repositorio con el comando <h3>git add</h3>
 aqui va una imagen:<br>
 <img src="chipinque.jpg" width="100" height="100"><br>
 esperemos que se haya cargado...
+<button onclick=navigator.camera.getPicture(tomar())
 </body>
 </html>
